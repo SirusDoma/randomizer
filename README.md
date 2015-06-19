@@ -31,7 +31,7 @@ var doubleValue = random.NextDouble();
 ```
 
 # The Quality of Generated Value
-Basically, the randomizer will generate *SAME* value as long randomizer is provided by the same `seed` value.
-In .NET, System.Random by default is supplied with `Environment.TickCount` as the `seed` to ensure randomizer to generate different / unique value.
+Basically, the randomizer will generate **SAME** value as long randomizer is provided by the same `seed` value.  
+In .NET, System.Random by default is supplied with `Environment.TickCount` as the `seed` to ensure randomizer to generate different / unique value.  
 
-By default, this randomizer is seeded by `new Date().getTime()` value (which assumed equal with of `Environment.TickCount` in C#).
+By default, this randomizer is seeded by `new Date().getTime()` value (which assumed equal with `Environment.TickCount` in C#).
