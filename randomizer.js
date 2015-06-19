@@ -94,7 +94,7 @@ Randomizer.prototype.Next = function(minValue, maxValue) {
 	else if (typeof minValue !== 'undefined' &&
 			 typeof maxValue === 'undefined') {
 		if (minValue < 0) {
-			minValue = -maxValue;
+			minValue = -minValue;
 		}
 
 		return (Sample.call(this) * minValue) | 0;	 
@@ -102,7 +102,13 @@ Randomizer.prototype.Next = function(minValue, maxValue) {
 	// Min and Max Value are provided
 	else {
 		if (minValue > maxValue) {
-			return -1;
+			// instead return -1
+			// we will swap between minValue and maxValue
+			var tmp = maxValue;
+			maxValue = minValue;
+			minValue = tmp;
+			
+			//return -1;
 		}
 	
 		var num = maxValue - minValue;
